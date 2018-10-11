@@ -34,7 +34,7 @@ public class MeSecondFloorHeaderImage extends LinearLayout {
         // 底部居中
         setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL);
         // padding
-        setPadding(0, 0, 0, 100);
+        setPadding(0, 0, 0, 160);
         // gif
         addGif();
     }
@@ -58,7 +58,10 @@ public class MeSecondFloorHeaderImage extends LinearLayout {
      */
     private void addGif() {
         GifImageView imageView = new GifImageView(getContext());
-        imageView.setImageResource(R.mipmap.gif_header_repast);
+        imageView.setImageResource(R.mipmap.ic_gif_header_dan);
+//        imageView.setImageResource(R.mipmap.ic_gif_header_repast);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(253, 207);
+        imageView.setLayoutParams(lp);
         addView(imageView);
     }
 }

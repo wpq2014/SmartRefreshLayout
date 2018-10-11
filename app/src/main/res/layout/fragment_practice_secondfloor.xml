@@ -17,7 +17,7 @@
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srlMaxRage="8.0"
+            app:srlMaxRage="5.0"
             app:srlFloorRage="1.8">
 
             <!--<ImageView-->

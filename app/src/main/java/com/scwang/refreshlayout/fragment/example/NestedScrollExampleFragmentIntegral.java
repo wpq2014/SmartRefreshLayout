@@ -33,7 +33,7 @@ import java.util.List;
 
 import static android.R.layout.simple_list_item_2;
 import static android.support.v7.widget.DividerItemDecoration.VERTICAL;
-import static com.scwang.refreshlayout.R.mipmap.gif_header_repast;
+import static com.scwang.refreshlayout.R.mipmap.ic_gif_header_repast;
 import static com.scwang.refreshlayout.R.mipmap.image_weibo_home_2;
 
 /**
@@ -63,7 +63,7 @@ public class NestedScrollExampleFragmentIntegral extends Fragment implements Ada
 
         Banner banner = (Banner) root.findViewById(R.id.banner);
         banner.setImageLoader(new BannerImageLoader());
-        banner.setImages(Arrays.asList(image_weibo_home_2,gif_header_repast));
+        banner.setImages(Arrays.asList(image_weibo_home_2, ic_gif_header_repast));
         banner.start();
 
         RecyclerView recyclerView = (RecyclerView) root.findViewById(R.id.recyclerView);
