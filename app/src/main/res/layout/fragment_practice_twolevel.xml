@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.scwang.refreshlayout.fragment.practice.TwoLevelPracticeFragment">
+    android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar style="@style/AppTheme.Toolbar"
         android:id="@+id/toolbar"
@@ -23,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <com.scwang.smartrefresh.layout.header.ClassicsHeader
-                android:id="@+id/classics"
+                android:id="@+id/second_floor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </com.scwang.smartrefresh.layout.header.TwoLevelHeader>

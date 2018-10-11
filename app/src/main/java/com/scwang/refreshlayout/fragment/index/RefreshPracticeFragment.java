@@ -29,6 +29,7 @@ import com.scwang.refreshlayout.activity.practice.WeiboPracticeActivity;
 import com.scwang.refreshlayout.adapter.BaseRecyclerAdapter;
 import com.scwang.refreshlayout.adapter.SmartViewHolder;
 import com.scwang.refreshlayout.fragment.practice.SecondFloorPracticeFragment;
+import com.scwang.refreshlayout.fragment.practice.TwoLevelPracticeFragment;
 import com.scwang.refreshlayout.util.StatusBarUtil;
 
 import java.util.Arrays;
@@ -50,8 +51,8 @@ public class RefreshPracticeFragment extends Fragment implements AdapterView.OnI
         Weibo(R.string.index_practice_weibo, WeiboPracticeActivity.class),
         Banner(R.string.index_practice_banner, BannerPracticeActivity.class),
         QQBrowser(R.string.index_practice_qq_browser, QQBrowserPracticeActivity.class),
-//        TwoLevel("二级刷新", SecondFloorPracticeFragment.class),
         SecondFloor(R.string.index_practice_second_floor, SecondFloorPracticeFragment.class),
+        TwoLevel(R.string.index_practice_second_floor, TwoLevelPracticeFragment.class),
         ;
         @StringRes
         public int name;

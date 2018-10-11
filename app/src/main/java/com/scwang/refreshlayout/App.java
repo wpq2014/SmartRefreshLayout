@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatDelegate;
 import com.scwang.refreshlayout.util.DynamicTimeFormat;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshHeaderCreator;
-import com.scwang.smartrefresh.layout.api.DefaultRefreshInitializer;
 import com.scwang.smartrefresh.layout.api.RefreshHeader;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
@@ -25,18 +24,18 @@ public class App extends Application {
         //启用矢量图兼容
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         //设置全局默认配置（优先级最低，会被其他设置覆盖）
-        SmartRefreshLayout.setDefaultRefreshInitializer(new DefaultRefreshInitializer() {
-            @Override
-            public void initialize(@NonNull Context context, @NonNull RefreshLayout layout) {
-                //全局设置（优先级最低）
-                layout.setEnableLoadMore(false);
-                layout.setEnableAutoLoadMore(true);
-                layout.setEnableOverScrollDrag(false);
-                layout.setEnableOverScrollBounce(true);
-                layout.setEnableLoadMoreWhenContentNotFull(true);
-                layout.setEnableScrollContentWhenRefreshed(true);
-            }
-        });
+//        SmartRefreshLayout.setDefaultRefreshInitializer(new DefaultRefreshInitializer() {
+//            @Override
+//            public void initialize(@NonNull Context context, @NonNull RefreshLayout layout) {
+//                //全局设置（优先级最低）
+//                layout.setEnableLoadMore(false);
+//                layout.setEnableAutoLoadMore(true);
+//                layout.setEnableOverScrollDrag(false);
+//                layout.setEnableOverScrollBounce(true);
+//                layout.setEnableLoadMoreWhenContentNotFull(true);
+//                layout.setEnableScrollContentWhenRefreshed(true);
+//            }
+//        });
         SmartRefreshLayout.setDefaultRefreshHeaderCreator(new DefaultRefreshHeaderCreator() {
             @NonNull
             @Override

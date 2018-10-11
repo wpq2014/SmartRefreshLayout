@@ -34,15 +34,7 @@ import com.scwang.refreshlayout.activity.style.WaveSwipeStyleActivity;
 import com.scwang.refreshlayout.adapter.BaseRecyclerAdapter;
 import com.scwang.refreshlayout.adapter.SmartViewHolder;
 import com.scwang.refreshlayout.util.StatusBarUtil;
-import com.scwang.smartrefresh.header.DropBoxHeader;
-import com.scwang.smartrefresh.header.FunGameHitBlockHeader;
-import com.scwang.smartrefresh.header.PhoenixHeader;
-import com.scwang.smartrefresh.layout.api.RefreshHeader;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
-import com.scwang.smartrefresh.layout.footer.BallPulseFooter;
-import com.scwang.smartrefresh.layout.header.ClassicsHeader;
-import com.scwang.smartrefresh.layout.impl.RefreshHeaderWrapper;
-import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
 import java.util.Arrays;
 
@@ -131,30 +123,30 @@ public class RefreshStylesFragment extends Fragment implements AdapterView.OnIte
 
         RefreshLayout refreshLayout = (RefreshLayout) root.findViewById(R.id.refreshLayout);
         if (refreshLayout != null) {
-            refreshLayout.setOnRefreshListener(new OnRefreshListener() {
-                @Override
-                public void onRefresh(@NonNull final RefreshLayout refreshLayout) {
-                    refreshLayout.finishRefresh(3000);
-                    refreshLayout.getLayout().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            RefreshHeader refreshHeader = refreshLayout.getRefreshHeader();
-                            if (refreshHeader instanceof RefreshHeaderWrapper) {
-                                refreshLayout.setRefreshHeader(new PhoenixHeader(getContext()));
-                            } else if (refreshHeader instanceof PhoenixHeader) {
-                                refreshLayout.setRefreshHeader(new DropBoxHeader(getContext()));
-                            } else if (refreshHeader instanceof DropBoxHeader) {
-                                refreshLayout.setRefreshHeader(new FunGameHitBlockHeader(getContext()));
-                            } else if (refreshHeader instanceof FunGameHitBlockHeader) {
-                                refreshLayout.setRefreshHeader(new ClassicsHeader(getContext()));
-                            } else {
-                                refreshLayout.setRefreshHeader(new RefreshHeaderWrapper(new BallPulseFooter(getContext())));
-                            }
-                            refreshLayout.setPrimaryColorsId(R.color.colorPrimary, android.R.color.white);
-                        }
-                    },4000);
-                }
-            });
+//            refreshLayout.setOnRefreshListener(new OnRefreshListener() {
+//                @Override
+//                public void onRefresh(@NonNull final RefreshLayout refreshLayout) {
+//                    refreshLayout.finishRefresh(3000);
+//                    refreshLayout.getLayout().postDelayed(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            RefreshHeader refreshHeader = refreshLayout.getRefreshHeader();
+//                            if (refreshHeader instanceof RefreshHeaderWrapper) {
+//                                refreshLayout.setRefreshHeader(new PhoenixHeader(getContext()));
+//                            } else if (refreshHeader instanceof PhoenixHeader) {
+//                                refreshLayout.setRefreshHeader(new DropBoxHeader(getContext()));
+//                            } else if (refreshHeader instanceof DropBoxHeader) {
+//                                refreshLayout.setRefreshHeader(new FunGameHitBlockHeader(getContext()));
+//                            } else if (refreshHeader instanceof FunGameHitBlockHeader) {
+//                                refreshLayout.setRefreshHeader(new ClassicsHeader(getContext()));
+//                            } else {
+//                                refreshLayout.setRefreshHeader(new RefreshHeaderWrapper(new BallPulseFooter(getContext())));
+//                            }
+//                            refreshLayout.setPrimaryColorsId(R.color.colorPrimary, android.R.color.white);
+//                        }
+//                    },4000);
+//                }
+//            });
         }
     }
 
